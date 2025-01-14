@@ -39,7 +39,7 @@ function App() {
   return (
     <div className='container'>
       <div className='header'>
-        <img id="headerImg" src="./public/cv.png" alt="CV Logo" />
+        <img id="headerImg" src="/cv.png" alt="CV Logo" />
         <h1>RESUME BUILDER</h1>
       </div>
       <div className='main'>

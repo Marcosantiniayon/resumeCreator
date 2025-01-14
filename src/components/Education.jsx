@@ -4,7 +4,7 @@ import { formatText } from "../App";
 export function Education({ educationEntries, updateEducationEntries }) {
 
     function addEducationEntry(){
-        updateEducationEntries([...educationEntries, { id: Date.now(), degree: "", gradYear: "", school: "", gpa:"", skills: "" }]);
+        updateEducationEntries([...educationEntries, { id: Date.now(), degree: "", gradYear: "", school: "", gpa:"", summary: "" }]);
     };
     function removeEducationEntry(id) {
         updateEducationEntries(educationEntries.filter((entry) => entry.id !== id));
@@ -32,7 +32,7 @@ export function Education({ educationEntries, updateEducationEntries }) {
                     onInputChange={(field, value) => updateState(entry.id, field, value)}
                 />
             ))}
-            <input type="image" src="./public/add2.png" id="addEducationBtn" className="addBtn" onClick={addEducationEntry}></input>
+            <input type="image" src="/add2.png" id="addEducationBtn" className="addBtn" onClick={addEducationEntry}></input>
 
         </div>
     );
@@ -44,7 +44,7 @@ function Container({ id, onRemove, onInputChange }) {
             <div className="inputDiv">
                 <div className="inputDivTop">
                     <label>Degree</label>
-                    <input type="image" src="./public/minus.png" className="removeBtn" onClick={() => onRemove(id)}></input>
+                    <input type="image" src="/minus.png" className="removeBtn" onClick={() => onRemove(id)}></input>
                 </div>
                 <input type="text" onChange={(e) => onInputChange("degree", e.target.value)} />
             </div>
@@ -63,7 +63,7 @@ function Container({ id, onRemove, onInputChange }) {
             <div className="inputDiv">
                 <label>Summary</label>
                 {/* <input type="text" onChange={(e) => onInputChange("gpa", e.target.value)} /> */}
-                <textarea type="textarea" onChange={(e) => onInputChange("skills", e.target.value)} />
+                <textarea type="textarea" onChange={(e) => onInputChange("sumary", e.target.value)} />
 
             </div>
             <hr className="sectionDivider" />
@@ -96,7 +96,7 @@ export function EducationOutput({ educationEntries }) {
                                 {entry.gpa && ` (GPA: ${entry.gpa})` }
                             </p>
                         </div>
-                        <p className="summaryOutput">{formatText(entry.skills)}</p>
+                        <p className="summaryOutput">{formatText(entry.summary)}</p>
                     </div>
                 ))}
         </div>

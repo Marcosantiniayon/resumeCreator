@@ -38,7 +38,7 @@ export function Experience({experienceEntries, updateExperienceEntries}) {
                     onInputChange={(field, value) => updateState(entry.id, field, value)}
                 />
             ))}
-            <input type="image" src="./public/add2.png" id="addExperienceBtn" className="addBtn" onClick={addExperienceEntry}></input>
+            <input type="image" src="/add2.png" id="addExperienceBtn" className="addBtn" onClick={addExperienceEntry}></input>
         </div>
     )
 }
@@ -49,7 +49,7 @@ function Container({ id, onRemove, onInputChange }) {
             <div className="inputDiv">
                 <div className="inputDivTop">
                     <label>Position Title</label>
-                    <input type="image" src="./public/minus.png" className="removeBtn" onClick={() => onRemove(id)}></input>
+                    <input type="image" src="/minus.png" className="removeBtn" onClick={() => onRemove(id)}></input>
                 </div>
                 <input type="text" onChange={(e) => onInputChange("position", e.target.value)} />
             </div>
