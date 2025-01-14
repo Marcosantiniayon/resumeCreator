@@ -1,0 +1,229 @@
+* {
+    box-sizing: border-box;
+}
+
+p,
+li {
+    margin: 4px 0px 4px 0px;
+    font-weight: 400;
+    font-size: .9em;
+}
+
+hr {
+    font-weight: 800;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    min-width: 100vw;
+    /* margin: 0 auto; */
+    overflow-x: auto;
+}
+
+
+.header {
+    height: 80px;
+    background-color: rgb(80, 91, 138);
+    padding: 16px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+    flex-shrink: 0;
+    /* min-width: 3000px */
+}
+
+#headerImg {
+    width: 50px;
+}
+
+.main {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(193, 198, 220);
+    width: 30%;
+    min-width: 380px;
+    max-width: 900px;
+    padding: 16px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    /* Makes it sticky */
+    top: 0;
+    /* Sticks to the top */
+    height: 100%;
+    /* Takes the full height of the parent container */
+    overflow-y: auto;
+    /* Enables vertical scrolling */
+
+}
+
+.sectionDiv {
+    background-color: rgb(80, 91, 138);
+    border-radius: 12px;
+    /* border: solid red 2px; */
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionDivider {
+    border-color: rgba(255, 255, 255, 0.254);
+    width: 100%;
+}
+
+.output {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(235, 235, 235);
+    padding: 16px;
+    color: black;
+}
+
+.page {
+    /* outline: 2px solid red; */
+    width: 816px;
+    height: 1056px;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 16px;
+    overflow: hidden;
+}
+
+.output .formBtnsDiv {
+    display: flex;
+    gap: 12px;
+    align-self: end;
+}
+
+.inputsDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.inputDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.inputDivTop {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+h2 {
+    margin-top: 12px;
+    margin-bottom: 8px;
+}
+
+h1 {
+    margin: 0px;
+    font-size: 38px;
+    /* font-family: "Rubik Mono One", serif; */
+    font-weight: 900;
+    font-style: normal;
+    color: rgb(249, 249, 249);
+    text-shadow: 5px 5px 4px rgba(27, 27, 59, 0.6);
+}
+
+label {
+    /* text-align: right; */
+    /* width: 200px; */
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 4px;
+    padding: 6px;
+    background-color: rgb(163, 163, 188);
+}
+
+textArea {
+    height: 200px;
+    overflow: hidden;
+    background-color: rgb(163, 163, 188);
+    resize: none;
+    border-radius: 4px;
+    padding: 6px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+button {
+    background-color: rgb(63, 59, 86);
+}
+
+.addBtn,
+.removeBtn {
+    margin: 10px 0 2px 0;
+    height: 30px;
+    /* padding: 2px 8px; */
+    width: 30px;
+    background-color: rgb(51, 58, 92);
+}
+
+
+.generalOutputDiv {
+    text-align: center;
+    justify-items: center;
+}
+
+.contactInfo {
+    display: flex;
+    gap: 20px;
+}
+
+.contactInfoSub {
+    display: flex;
+    gap: 4px
+}
+
+.degreeAndYearDiv,
+.positionAndYearsDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.degreeOutput,
+.position {
+    font-size: 1.1em;
+    font-weight: 700;
+    /* font-style: ; */
+}
+
+.schoolAndGPADiv {
+    display: flex;
+    gap: 12px;
+}
+
+.yearsDiv {
+    display: flex;
+}
+
+.outputLabel {
+    /* font-style: italic; */
+}
+
+.summaryOutput {
+    /* width: 100%; */
+    word-wrap: break-word
+}
