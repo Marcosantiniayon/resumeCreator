@@ -63,7 +63,7 @@ function Container({ id, onRemove, onInputChange }) {
             <div className="inputDiv">
                 <label>Summary</label>
                 {/* <input type="text" onChange={(e) => onInputChange("gpa", e.target.value)} /> */}
-                <textarea type="textarea" onChange={(e) => onInputChange("sumary", e.target.value)} />
+                <textarea type="textarea" onChange={(e) => onInputChange("summary", e.target.value)} />
 
             </div>
             <hr className="sectionDivider" />

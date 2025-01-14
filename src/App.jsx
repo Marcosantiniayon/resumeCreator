@@ -24,7 +24,7 @@ function App() {
     gradYear: "",
     school: "",
     gpa: "",
-    skills: ""
+    summary: ""
   }]);
   const [experienceEntries, updateExperienceEntries] = useState([{
     id: Date.now(),
@@ -77,7 +77,10 @@ function App() {
 }
 
 // Utility Functions
-export function formatText (text) {
+export function formatText(text) {
+  // Ensure text is always a string
+  if (!text) text = "";
+
   return text.split("\n").map((line, index) => {
     if (line.trim().startsWith("* ")) {
       return (
@@ -89,6 +92,6 @@ export function formatText (text) {
       return <p key={index}>{line}</p>;
     }
   });
-};
+}
 
 export default App
